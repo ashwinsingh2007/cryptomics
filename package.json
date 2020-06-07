@@ -1,0 +1,21 @@
+{
+  "name": "cryptomics",
+  "version": "1.0.0",
+  "description": "Crypto Currency",
+  "main": "index.js",
+  "bin": "./bin/cryptomics.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ashwani Kumar",
+  "link": "https://github.com/ashwinsingh2007",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "colors": "^1.4.0",
+    "commander": "^5.1.0",
+    "configstore": "^5.0.1",
+    "express": "^4.17.1",
+    "inquirer": "^7.1.0"
+  }
+}
