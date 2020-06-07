@@ -7,6 +7,6 @@ jobs:
       - checkout
       - run: npm install
 workflows:
-    build-with-docker:
-      jobs:
-        - build
+  build-with-docker:
+    jobs:
+      - build
