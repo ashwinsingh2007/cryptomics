@@ -4,7 +4,7 @@ const colors = require("colors");
 const pkg = require("../package.json");
 const check = {
     async price(cmd) {
-        console.log('==cmd===', cmd.coin, 'coin.cur', cmd.cur)
+        // console.log('==cmd===', cmd.coin, 'coin.cur', cmd.cur)
         try {
             key_manager = new keyManager();
             const key = key_manager.getKey();

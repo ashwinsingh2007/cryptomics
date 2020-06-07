@@ -9,9 +9,9 @@ app.get('/', async (req, res) => {
     const key = key_manager.getKey();
     const api = new crypto_api(key);
     
-    const priceOutputData = await api.getPriceData('BTC,ETH,XRP,USDT,BCH,BSV,LTC,EOS,BNB,XTZ', 'USD'); 
+    const priceOutputData = await api.getPriceDataInJson('BTC,ETH,XRP,USDT,BCH,BSV,LTC,EOS,BNB,XTZ', 'USD'); 
     console.log('priceOutputData', priceOutputData)
-    res.json({result: priceOutputData}) 
+    res.json({result: JSON.stringify(priceOutputData)}) 
 })
 
 app.listen(port, () => console.log(`app listening at http://localhost:${port}`))
