@@ -2,14 +2,16 @@ version: 2.1
 orbs:
   node: circleci/node@1.1.6
 jobs:
-  build:
-    executor:
-      name: node/default
+  build:    
+    docker:
+      — image: circleci/node:7.10
     steps:
       - checkout
       - node/with-cache:
           steps:
             - run: npm install
+
+
 workflows:
     build:
       jobs:
