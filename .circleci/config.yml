@@ -4,13 +4,15 @@ orbs:
 jobs:
   build:
     executor:
-      name: node/default
+      node:
+        docker:
+          - image: circleci/node:10.16
     steps:
       - checkout
       - node/with-cache:
           steps:
             - run: npm install
 workflows:
-    build:
-      jobs:
-        - build
+  build:
+    jobs:
+      - build
