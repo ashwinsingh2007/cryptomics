@@ -1,11 +1,15 @@
 version: 2
 jobs:
-  build:
+  build-cryptomics:
     docker: 
-      - image: circleci/node:11.10.1
-
-    working_directory: ~/repo
-
+      - image: circleci/node:10
     steps: 
       - checkout
-      - run: yarn install
+      - run: 
+          name: Install dependencies
+          command: |
+            npm install --save
+workflows:
+  build:
+    jobs:
+      - build-cryptomics
