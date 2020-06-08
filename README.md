@@ -1,4 +1,4 @@
-# Crypto-Coin
+# Cryptomics
 CLI Based app to show the price of Crypto Currency
 
 Cryptomics CLI
